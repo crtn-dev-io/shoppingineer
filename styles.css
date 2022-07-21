@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+body {
+  background-color: #f5e3d9;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.color--grey {
+  color: #4f4c4a;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.body-1 {
+  font-size: 16px;
+}
+
+.body-2 {
+  font-size: 14px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 2px;
+  border: none;
+  padding: 15px 10px;
+  width: 100%;
+  font-size: 13px;
+}
+
+.btn--main {
+  background-color: #201e1d;
+  color: white;
+  font-weight: 300;
+}
+
+.card {
+  background-color: #ee9b80;
+  width: fit-content;
+}
+
+.card--content {
+  padding: 12px 22px;
+}
+
+.inline--content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.align--end {
+  display: flex;
+  align-items: end;
+  gap: 15px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr minmax(250px, 500px) 1fr;
+  gap: 50px;
+  row-gap: 10px;
+  margin: 40px;
+  height: 582px;
+}
+
+.installation {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+  row-gap: 10px;
+  margin: 0 40px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.product--collection {
+  background-color: #ea562a;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.product--description {
+  display: flex;
+  align-items: end;
+}
+
+.product--image {
+  width: 97%;
+  object-fit: contain;
+}
+
+.product--booking {
+  display: flex;
+  align-items: end;
+}
+
+.img--text {
+  position: absolute;
+  top: 90px;
+  right: -50px;
+  transform: rotate(-90deg);
+}
+
+.icon {
+  width: 20px;
+}
+
+.booking--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.line {
+  border: 0.2px solid #201e1d;
+}
+
+.text--content {
+  max-height: 582px;
+  overflow: scroll;
+}
+
+.madein {
+  grid-column-start: 2;
+  justify-content: end;
+  display: flex;
+}
+
+.tools {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.process--header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+}
+
+.list {
+  padding-inline-start: 20px;
+}
+
+.installation--image {
+  max-width: 100%;
+  width: 750px;
+}
+
+.faq {
+  display: flex;
+  text-align: end;
+}
+
+.check::after {
+}
+
+.check::after {
+  content: "🤓";
+  color: var(--me-dark-color);
+  display: inline-block;
+  text-align: end;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.check:hover {
+  -webkit-transform: none;
+  transform: none;
+}
+
+.check:hover::after {
+  visibility: visible;
+  opacity: 1;
+  padding: 0 10px;
+}
+
+.empty {
+  margin: auto;
+}
+
+.empty--img {
+  width: 300px;
+}
+
+.empty--description {
+  display: flex;
+  text-align: center;
+}

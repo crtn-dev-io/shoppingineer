@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shoppingineer</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/icons/escape-white.png"
+    />
+    <script>
+      var window = window;
+      function showMore() {
+        let text = document.getElementById("more-text");
+        if (document.getElementById("more").style.display === "block") {
+          text.childNodes[0].textContent = "View more";
+          return (document.getElementById("more").style.display = "none");
+        }
+        text.childNodes[0].textContent = "View less";
+        return (document.getElementById("more").style.display = "block");
+      }
+
+      function openLinkedin() {
+        window.open("https://www.linkedin.com/in/corentin-io/", "blank");
+      }
+
+      function playSound() {
+        let sound = document.getElementById("sound");
+        console.log(sound.src);
+        var audio = document.getElementById("myAudio");
+        if (sound.src.includes("assets/icons/campfire.gif")) {
+          audio.pause();
+          return (sound.src = "assets/icons/wood.gif");
+        }
+        if (sound.src.includes("assets/icons/wood.gif")) {
+          audio.play();
+          audio.volume = 0.2;
+          return (sound.src = "assets/icons/campfire.gif");
+        }
+      }
+
+      function initApplication() {
+        document.getElementById("mobile--content").style.display = "none";
+        if (window.innerWidth < 1130) {
+          document.getElementById("desktop--content").style.display = "none";
+          document.getElementById("mobile--content").style.display = "block";
+        } else {
+          document.getElementById("desktop--content").style.display = "block";
+        }
+      }
+
+      window.onload = function () {
+        initApplication();
+      };
+
+      window.addEventListener("resize", function () {
+        initApplication();
+      });
+    </script>
+  </head>
+  <body>
+    <main id="mobile--content">
+      <div class="container">
+        <div class="empty">
+          <img src="assets/icons/wood.gif" class="empty--img" />
+          <p class="empty--description">
+            Mobile and tablets version under construction...
+          </p>
+        </div>
+      </div>
+    </main>
+    <main id="desktop--content">
+      <div class="container">
+        <article class="product">
+          <section class="product--description">
+            <div class="text--content">
+              <h1 class="bold mb-32">
+                COMPOSITION, ORIGIN AND PRODUCTION PATH
+              </h1>
+              <h4 class="bold">COMPOSITION</h4>
+              <p class="color--grey">
+                We work with monitoring programmes to ensure compliance with
+                safety, health and quality standards for our engineers.
+              </p>
+              <p class="color--grey">
+                The Engineer 2.0 standard aims to minimise the environmental
+                impact of Javascript manufacturing.<br />
+                To that end, we have developed Web The Dev programme, which
+                helps guarantee both that production processes are clean and
+                that our engineers are safe and healthy.
+              </p>
+              <div id="more" style="display: none" class="answer_list">
+                <h4 class="bold">ORIGIN</h4>
+                <p class="color--grey">
+                  We work alongside our suppliers, workers, unions and
+                  international bodies to develop a supply chain that respects
+                  and promotes engineers skills, contributing to the United
+                  Nations Sustainable Web Development Goals.
+                </p>
+                <p class="color--grey">
+                  Additionally, thanks to an ongoing collaboration with our
+                  suppliers, we have developed a tracking programme that allows
+                  us to determine where and how our products are being made.
+                </p>
+                <h4 class="bold mb-0">OUTER SHELL</h4>
+                <p class="color--grey mt-0">
+                  90% cactus leather <span class="dot">.</span> 10% cat's hair
+                </p>
+              </div>
+              <div class="more">
+                <p
+                  id="more-text"
+                  class="color--grey underline m-0 clickable"
+                  onclick="showMore()"
+                >
+                  View more
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="product--collection">
+            <img class="product--image" src="assets/PROFILE_PICTURE.png" />
+            <p class="img--text">
+              © COLLECTION<span class="bold"> / 2022</span>
+            </p>
+          </section>
+          <section class="product--booking">
+            <div class="text--content">
+              <div class="booking--header">
+                <h2 class="bold m-0">FRONT-END ENGINEER</h2>
+                <img
+                  id="sound"
+                  class="clickable"
+                  src="assets/icons/wood.gif"
+                  width="50"
+                  onclick="playSound()"
+                />
+                <audio id="myAudio">
+                  <source src="assets/audio/slack.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <p class="light color--grey mb-32">
+                A relaxed developer made of baguette and half-salted butter. It
+                contains cat hairs and traces of hummus.
+              </p>
+              <p class="regular mb-32 body-1">JS2022 | 9492/482</p>
+              <div class="card mb-32">
+                <p class="light card--content">-30% on engineer jokes</p>
+              </div>
+              <div class="line"></div>
+              <div class="inline--content mb-16">
+                <img src="assets/icons/warning.png" class="icon" />
+                <p class="regular body-1">Only one size available</p>
+              </div>
+              <div class="wrapper"></div>
+              <button
+                type="button"
+                class="btn btn-flip btn--main mb-16 clickable"
+                onclick="openLinkedin()"
+              >
+                ADD TO YOUR NETWORK
+              </button>
+              <p class="body-1 check clickable" onclick="openLinkedin()">
+                CHECK-IN BUSINESS AVAILABILITY
+              </p>
+              <div class="align--end">
+                <img class="icon" src="assets/icons/recycle.png" />
+                <p class="body-1 m-0">RECYCLABLE PRODUCT</p>
+              </div>
+            </div>
+          </section>
+          <div class="madein">
+            <div class="made inline--content">
+              <p class="bold m-0">Made in France</p>
+              <img class="icon" src="assets/icons/france.png" />
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="container">
+        <article class="installation">
+          <section class="process">
+            <div class="process--header">
+              <h2 class="m-0">INSTALLATION PROCESS*</h2>
+              <div class="tools">
+                <div class="tool-count">
+                  <img class="icon" src="assets/icons/nailer.png" />
+                  <p class="light">1x</p>
+                </div>
+                <div class="tool-count">
+                  <img class="icon" src="assets/icons/nail.png" />
+                  <p class="light">5x</p>
+                </div>
+                <div class="tool-count">
+                  <img class="icon" src="assets/icons/screw.png" />
+                  <p class="light">3x</p>
+                </div>
+                <div class="tool-count">
+                  <img class="icon" src="assets/icons/escape.png" />
+                  <p class="light">1x</p>
+                </div>
+              </div>
+            </div>
+            <ol class="list">
+              <li class="color--grey">Install a good chair.</li>
+              <li class="color--grey">
+                Build the desk with the provided tools.
+              </li>
+              <li class="color--grey">
+                Every engineer product comes with its own equipment.
+              </li>
+              <li class="color--grey">
+                Enjoy every single line of code not tested.
+              </li>
+            </ol>
+            <img class="installation--image" src="assets/working.png" />
+            <p class="light color--grey">
+              * Cat not included,
+              <a
+                href="https://www.la-spa.fr/adoption/?search=1&species=chat&page=1"
+                target="blank"
+                class="color--grey"
+              >
+                please reach our cat support</a
+              >
+            </p>
+          </section>
+          <section class="faq">
+            <div class="faq--content">
+              <h2 class="m-0 mb-64">HELP</h2>
+              <div class="faq--questions">
+                <h3 class="regular">1. Do I need to feed it?</h3>
+                <p class="color--grey light mb-48">
+                  Yes, it is strongly recommended. An engineer needs about 5
+                  cereal bowls and almost 10 coffees to be the most efficient.
+                </p>
+                <h3 class="regular">2. Does it talk?</h3>
+                <p class="color--grey light mb-48">
+                  It can sometimes but don't forget, do not remove their
+                  headphones or risk a mandatorv industrial reset for the
+                  engineer to work as before the incident.
+                </p>
+                <h3 class="regular">3. I don't understand when it talks</h3>
+                <p class="color--grey light mb-48">
+                  That's completely normal, no one does, that's why we includes
+                  our engineer to human translator.
+                </p>
+                <h3 class="regular">4. Can I pair it with another engineer?</h3>
+                <p class="color--grey light mb-48">
+                  Of course, our engineers are designed to communicate between
+                  them via bluetooth. Just click 5 seconds on the middle button
+                  of the mouse to pair them.
+                </p>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
