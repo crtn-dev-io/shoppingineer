@@ -52,6 +52,10 @@
         }
       }
 
+      function redirectOldWebsite() {
+        window.open("https://crtn-dev-io.github.io/myresume/");
+      }
+
       window.onload = function () {
         initApplication();
       };
@@ -199,7 +203,11 @@
                   <p class="light">3x</p>
                 </div>
                 <div class="tool-count">
-                  <img class="icon" src="assets/icons/escape.png" />
+                  <img
+                    class="icon clickable"
+                    src="assets/icons/escape.png"
+                    onclick="redirectOldWebsite()"
+                  />
                   <p class="light">1x</p>
                 </div>
               </div>
